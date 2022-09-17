@@ -1,0 +1,526 @@
+:root{
+
+    --gray: #636366;
+    --red:#E7514A;
+    --orange: #F37651;
+    --blue:#4694D0;
+    --light-blue:#61C8D8;
+    --yellow:#F7AD36;
+    --green:#8FC973;
+    --aquamarine:#3ABCA9;
+    --lila:#7A71B2;
+    --pink:#F27DA4;
+    --strong-pink:#D9497C;
+
+}
+
+*{
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+}
+
+body{
+
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+header{
+
+    width: 100%;
+}
+
+.title{
+
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--gray);
+
+}
+
+.root{
+
+    width: 1500px;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr)
+    
+}
+
+.element{
+    
+    display: grid;
+    place-items: center;
+    height: max-content;
+    margin: 4px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.element:hover{
+
+ transform: scale(1.1);
+}
+
+.element::first-letter{
+
+    text-transform: uppercase;
+
+}
+
+.atomicNumber{
+
+    font-size: 16px;
+    margin: 0;
+
+}
+
+.symbol{
+
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.lant{
+
+    grid-area: 9/4/11/19;
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+    
+}
+
+.gas{
+
+    grid-area: 2/18/9/19 ;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    
+}
+
+.halog{
+
+    grid-area: 3/17/9/18 ;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    
+}
+
+.alkaliM{
+
+    grid-area: 3/1/9/2 ;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    
+}
+
+.earth{
+
+    grid-area: 3/2/9/3 ;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+
+}
+
+/* CARD  */
+.card{
+
+    grid-area: 1/6/3/8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--blue);
+    border-radius: 8px;
+    place-items: center;
+    z-index: 1;
+}
+
+.atomic-number-cont{
+
+    grid-area: 1/1/2/2;
+    
+}
+
+.text-atomic{
+
+    font-size: 12px;
+    text-align: center;
+    padding: 4px;
+    color: white;
+}
+
+.icon-right{
+
+    transform: rotate(360deg);
+    width: 30px;
+
+}
+
+.number-container{
+
+    display: grid;
+    place-items: center;
+}
+.number{
+
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.symbol-cont{
+
+    grid-area: 2/3/3/4;
+    padding: 4px;
+    font-size: 12px;
+    color: white;
+}
+
+.icon-left{
+
+    width: 30px;
+    transform: rotateY(180deg);
+    
+}
+
+.sign-cont{
+
+    grid-area: 2/2/3/3;
+    display: grid;
+    place-items: center;
+}
+
+.sign{
+
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+
+}
+
+
+
+/* WHITE SPACES  */
+.whiteSpace1{
+
+    grid-area: 1/1/2/19;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    text-align: center;
+    align-items: flex-end;
+}
+
+.whiteSpace1 .block18{
+
+    grid-area: 1/18/2/19;
+}
+
+.whiteSpace2{
+
+    grid-area: 2/2/3/18;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: 1fr 30px;
+    text-align: center;
+    align-items: flex-end;
+}
+
+
+
+.block2{
+
+    grid-area: 2/1/3/2;
+}
+
+.block13{
+
+    grid-area: 2/12/3/13;
+}
+
+.block14{
+
+    grid-area: 2/13/3/14;
+}
+
+.block15{
+
+    grid-area: 2/14/3/15;
+}
+
+.block16{
+
+    grid-area: 2/15/3/16;
+}
+
+.block17{
+
+    grid-area: 2/16/3/17;
+}
+
+
+.whiteSpace3{
+
+    grid-area: 3/3/5/13;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+    align-items: flex-end;
+}
+
+.whiteSpace4{
+
+    grid-area: 7/3/9/4;
+    
+}
+
+/* ELEMENTS TABLE STYLES  */
+.nonmetal{
+
+    background-color: var(--blue);
+
+}
+
+.noble-gas{
+
+    background-color: var(--lila);
+
+}
+
+.alkali-metal{
+
+    background-color: var(--red);
+}
+
+.alkaline-earth-metal{
+
+    background-color: var(--orange);
+}
+
+.metalloid{
+
+    background-color: var(--light-blue);
+}
+
+.halogen{
+
+    background-color: var(--aquamarine);
+}
+
+.transition-metal{
+
+    background-color: var(--yellow);
+}
+
+.lanthanoid{
+
+    background-color: var(--pink);
+
+}
+
+.metal{
+
+    background-color: var(--green);
+}
+
+.actinoid{
+
+    background-color: var(--strong-pink);
+}
+
+.post-transition-metal{
+
+    background-color: var(--green);
+}
+
+
+/* SPECIAL STYLES  */
+
+/* BLOCK 4  */
+
+.element104{
+
+    grid-area: 8/4/9/5;
+}
+
+.element105{
+
+    grid-area: 8/5/9/6;
+}
+
+.element106{
+
+    grid-area: 8/6/9/7;
+}
+
+.element107{
+
+    grid-area: 8/7/9/8;
+}
+
+.element108{
+
+    grid-area: 8/8/9/9;
+}
+
+.element109{
+
+    grid-area: 8/9/9/10;
+}
+
+.element110{
+
+    grid-area: 8/10/9/11;
+}
+
+.element111{
+
+    grid-area: 8/11/9/12;
+}
+
+.element112{
+
+    grid-area: 8/12/9/13;
+}
+
+/* BLOCK 13  */
+.element13{
+
+    grid-area: 4/13/5/14;
+}
+
+.element31{
+
+    grid-area: 5/13/6/14;
+}
+
+.element49{
+
+    grid-area: 6/13/7/14;
+}
+
+.element81{
+
+    grid-area: 7/13/8/14;
+}
+
+.element113{
+
+    grid-area: 8/13/9/14;
+}
+
+/* BLOCK 14  */
+
+.element14{
+
+    grid-area: 4/14/5/15;
+}
+
+.element32{
+
+    grid-area: 5/14/6/15;
+}
+
+.element50{
+
+    grid-area: 6/14/7/15;
+}
+
+.element82{
+
+    grid-area: 7/14/8/15;
+}
+
+.element114{
+
+    grid-area: 8/14/9/15;
+}
+
+/* BLOCK 15  */
+.element15{
+
+    grid-area: 4/15/5/16;
+}
+
+.element33{
+
+    grid-area: 5/15/6/16;
+}
+
+.element51{
+
+    grid-area: 6/15/7/16;
+}
+
+.element83{
+
+    grid-area: 7/15/8/16;
+}
+
+.element115{
+
+    grid-area: 8/15/9/16;
+}
+
+/* BLOCK 16  */
+.element16{
+
+    grid-area: 4/16/5/17;
+}
+
+.element34{
+
+    grid-area: 5/16/6/17;
+}
+
+.element52{
+
+    grid-area: 6/16/7/17;
+}
+
+.element84{
+
+    grid-area: 7/16/8/17;
+}
+
+.element116{
+
+    grid-area: 8/16/9/17;
+}
+
+/* BLOCK 17  */
+
+.element117{
+
+    grid-area: 8/17/9/18;
+}
+
+/* BLOCK 18  */
+
+.element103{
+
+    grid-area: 10/18/11/19;
+    background-color: var(--strong-pink);
+}
+
+.lanthanoids-text{
+
+    grid-area: 9/1/10/4;
+    display: grid;
+    place-items: center;
+    color: var(--gray);
+    font-weight: bold;
+
+}
+
+.actinoids-text{
+
+    grid-area: 10/1/11/4;
+    display: grid;
+    place-items: center;
+    color: var(--gray);
+    font-weight: bold;
+}
