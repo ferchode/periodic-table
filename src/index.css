@@ -21,8 +21,8 @@
 
 body{
 
-    max-width: 100%;
-    max-height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 
 header{
@@ -46,6 +46,39 @@ header{
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(10, 1fr)
     
+}
+
+.back-alert{
+
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.66);
+    z-index: 3;
+    
+}
+
+.alert-cont{
+
+    width: 700px;
+    height: 150px;
+    display: grid;
+    place-content: center;
+    margin: auto;
+    margin-top: calc(100vh - 70vh);
+    background-color: var(--gray);
+    border: black;
+    border-radius: 6px;
+}
+
+.text-alert{
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px;
 }
 
 .element{
@@ -141,7 +174,7 @@ header{
 
 .atomic-number-cont{
 
-    grid-area: 1/1/2/2;
+    grid-area: 1/3/2/4;
     
 }
 
@@ -151,13 +184,6 @@ header{
     text-align: center;
     padding: 4px;
     color: white;
-}
-
-.icon-right{
-
-    transform: rotate(360deg);
-    width: 30px;
-
 }
 
 .number-container{
@@ -180,16 +206,9 @@ header{
     color: white;
 }
 
-.icon-left{
-
-    width: 30px;
-    transform: rotateY(180deg);
-    
-}
-
 .sign-cont{
 
-    grid-area: 2/2/3/3;
+    grid-area: 2/1/3/2;
     display: grid;
     place-items: center;
 }
@@ -199,7 +218,13 @@ header{
     font-size: 60px;
     font-weight: bold;
     color: white;
+    text-align: center;
 
+}
+
+.arrows{
+
+    font-size: 26px;
 }
 
 
@@ -523,4 +548,132 @@ header{
     place-items: center;
     color: var(--gray);
     font-weight: bold;
+}
+
+/* ELEMENTS OPEN CARD  */
+
+.element-card{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7 );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 2;
+    
+}
+
+.icon-close-cont{
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#icon-close{
+
+    width:40px;
+    height: 40px;
+}
+
+.open-card-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 0px 6px 4px rgba(255,255,255,0.66);
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    padding: 4px;
+    text-align: center;
+}
+.left-side{
+
+    grid-area: 1/1/2/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.left-side-title{
+
+    align-self: flex-end;
+    margin-bottom: 12px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.left-side-symbol{
+
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.right-side{
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 16px;
+}
+
+.card-titles{
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-specifications{
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* FOOTER  */
+
+footer{
+
+    width: 100%;
+    background-color: var(--gray);
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.social{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media{
+
+    font-size: 28px;
+    color: white;
+    transition: all ease-in-out 0.2s;
+}
+
+.social-media:hover{
+
+    color: rgba(0, 0, 0, 0.4);
+
 }

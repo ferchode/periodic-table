@@ -1,3 +1,5 @@
+import { renderCard } from "./renderCard.js";
+
 const API = 'https://neelpatel05.pythonanywhere.com'
 
 const root = document.querySelector('.root');
@@ -29,6 +31,9 @@ const data = async () => {
     let symbol = data[i].symbol;
     let atomicNumber = data[i].atomicNumber;
     let groupBlock = data[i].groupBlock;
+    let name = data[i].name;
+    let atomicMass = data[i].atomicMass;
+    let electronicConfiguration = data[i].electronicConfiguration;
     let group = groupBlock.replace(/ /g, '-');
 
     if (group != 'lanthanoid' && 
@@ -41,10 +46,7 @@ const data = async () => {
         
         const elementContainer = document.createElement('div');
         elementContainer.classList.add('element', `element${atomicNumber}`, `${group}`);
-        elementContainer.addEventListener('click', () => {
-
-            console.log(`${symbol}, ${atomicNumber}`)
-        })
+        elementContainer.addEventListener('click', (active) => { renderCard(symbol, name, atomicNumber, atomicMass, electronicConfiguration, group)})
 
         const number = document.createElement('p');
         number.classList.add('atomicNumber');
@@ -63,6 +65,7 @@ const data = async () => {
 
         const elementContainer = document.createElement('div');
         elementContainer.classList.add('element', `element${atomicNumber}`, `${group}`);
+        elementContainer.addEventListener('click', (active) => { renderCard(symbol, name, atomicNumber, atomicMass, electronicConfiguration, group)})
 
         const number = document.createElement('p');
         number.classList.add('atomicNumber');
@@ -82,6 +85,7 @@ const data = async () => {
 
         const elementContainer = document.createElement('div');
         elementContainer.classList.add('element', `element${atomicNumber}`, `${group}`);
+        elementContainer.addEventListener('click', (active) => { renderCard(symbol, name, atomicNumber, atomicMass, electronicConfiguration, group)})
 
         const number = document.createElement('p');
         number.classList.add('atomicNumber');
@@ -100,6 +104,7 @@ const data = async () => {
 
         const elementContainer = document.createElement('div');
         elementContainer.classList.add('element', `element${atomicNumber}`, `${group}`);
+        elementContainer.addEventListener('click', (active) => { renderCard(symbol, name, atomicNumber, atomicMass, electronicConfiguration, group)})
 
         const number = document.createElement('p');
         number.classList.add('atomicNumber');
@@ -120,6 +125,7 @@ const data = async () => {
 
         const elementContainer = document.createElement('div');
         elementContainer.classList.add('element', `element${atomicNumber}`, `${group}`);
+        elementContainer.addEventListener('click', (active) => { renderCard(symbol, name, atomicNumber, atomicMass, electronicConfiguration, group)})
 
         const number = document.createElement('p');
         number.classList.add('atomicNumber');
@@ -140,6 +146,7 @@ const data = async () => {
 
         const elementContainer = document.createElement('div');
         elementContainer.classList.add('element', `element${atomicNumber}`, `${group}`);
+        elementContainer.addEventListener('click', (active) => { renderCard(symbol, name, atomicNumber, atomicMass, electronicConfiguration, group)})
 
         const number = document.createElement('p');
         number.classList.add('atomicNumber');
@@ -155,8 +162,6 @@ const data = async () => {
     }
 
     }
-
-    console.log(data)
     
     }
 
