@@ -595,7 +595,7 @@ header{
     width: 300px;
     height: 300px;
     border-radius: 6px;
-    padding: 4px;
+    padding: 12px;
     text-align: center;
 }
 .left-side{
@@ -623,8 +623,8 @@ header{
 .right-side{
 
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    margin-top: 16px;
+    grid-template-rows: repeat(auto-fit, minmax(75px, 1fr));
+    
 }
 
 .card-titles{
